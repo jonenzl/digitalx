@@ -1,0 +1,10 @@
+D:\JEllis\Final Project\DigitalX\ClassLibrary\bin\Debug\ClassLibrary.dll.config
+D:\JEllis\Final Project\DigitalX\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\JEllis\Final Project\DigitalX\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\JEllis\Final Project\DigitalX\ClassLibrary\bin\Debug\EntityFramework.dll
+D:\JEllis\Final Project\DigitalX\ClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
+D:\JEllis\Final Project\DigitalX\ClassLibrary\bin\Debug\EntityFramework.xml
+D:\JEllis\Final Project\DigitalX\ClassLibrary\bin\Debug\EntityFramework.SqlServer.xml
+D:\JEllis\Final Project\DigitalX\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+D:\JEllis\Final Project\DigitalX\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\JEllis\Final Project\DigitalX\ClassLibrary\obj\Debug\ClassLibrary.pdb
