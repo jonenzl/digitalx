@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ClassLibrary" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfDigitalX" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTopSellers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopSellers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTopSellers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopSellersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductDetail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Orders_InputMessage">
+    <wsdl:part name="parameters" element="tns:Orders" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Orders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CurrentCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CurrentCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CurrentCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CurrentCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllProducts" message="tns:IService1_GetAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllProductsResponse" message="tns:IService1_GetAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetProducts" message="tns:IService1_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetProductsResponse" message="tns:IService1_GetProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopSellers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTopSellers" message="tns:IService1_GetTopSellers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTopSellersResponse" message="tns:IService1_GetTopSellers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProductDetail" message="tns:IService1_ProductDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProductDetailResponse" message="tns:IService1_ProductDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Orders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Orders" message="tns:IService1_Orders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OrdersResponse" message="tns:IService1_Orders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CurrentCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CurrentCustomer" message="tns:IService1_CurrentCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CurrentCustomerResponse" message="tns:IService1_CurrentCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAddress" message="tns:IService1_GetAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAddressResponse" message="tns:IService1_GetAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddCustomer" message="tns:IService1_AddCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddCustomerResponse" message="tns:IService1_AddCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddAddress" message="tns:IService1_AddAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddAddressResponse" message="tns:IService1_AddAddress_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopSellers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTopSellers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductDetail">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProductDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Orders">
+      <soap:operation soapAction="http://tempuri.org/IService1/Orders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrentCustomer">
+      <soap:operation soapAction="http://tempuri.org/IService1/CurrentCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAddress">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfDigitalX/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

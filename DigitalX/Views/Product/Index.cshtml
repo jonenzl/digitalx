@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DigitalX.ServiceReference1.Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Products</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th>
+            Name
+            @*@Html.DisplayNameFor(model => model.ProductName)*@
+        </th>
+        <th>
+            Description
+            @*@Html.DisplayNameFor(model => model.ProductDescription)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            Stock
+            @*@Html.DisplayNameFor(model => model.UnitsInStock)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @{ 
+                var base64 = Convert.ToBase64String(item.Picture);
+                var imgsrc = string.Format("data:image/jpeg;base64,{0}", base64);
+            }
+            <img src="@imgsrc" style="max-height:100px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitsInStock)
+        </td>
+        <td>
+            <a href="@Url.Action("Details", "Product", new { id = item.ProductID })" class="btn btn-primary btn-sm">Details &raquo;</a>
+            <a href="@Url.Action("AddToCart", "Product", new { id = item.ProductID })" class="btn btn-primary btn-sm">Add to Cart</a>
+        </td>
+    </tr>
+}
+</table>

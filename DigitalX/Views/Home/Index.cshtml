@@ -1,0 +1,102 @@
+﻿@model IEnumerable<DigitalX.ServiceReference1.Product>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <img src="~/Content/DigitalXLogotype.png" style="margin-bottom: 30px" />
+    <p class="lead">DigitalX is an online seller of movies, TV series, hardware, software, and games.</p>
+    <p><a href="@Url.Action("Index", "Product")" class="btn btn-primary btn-lg">View Products &raquo;</a></p>
+</div>
+
+<h3>Top Sellers</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th>
+            Name
+            @*@Html.DisplayNameFor(model => model.ProductName)*@
+        </th>
+        <th>
+            Description
+            @*@Html.DisplayNameFor(model => model.ProductDescription)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            Stock
+            @*@Html.DisplayNameFor(model => model.UnitsInStock)*@
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @{
+                    var base64 = Convert.ToBase64String(item.Picture);
+                    var imgsrc = string.Format("data:image/jpeg;base64,{0}", base64);
+                }
+                <img src="@imgsrc" style="max-height:100px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitsInStock)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |*@
+                <a href="@Url.Action("Details", "Product", new { id = item.ProductID })" class="btn btn-primary btn-sm">Details &raquo;</a>
+                <a href="@Url.Action("AddToCart", "Product", new { id = item.ProductID })" class="btn btn-primary btn-sm">Add to Cart</a>
+                @*@Html.ActionLink("Delete", "Delete", new { id=item.ProductID })*@
+            </td>
+        </tr>
+    }
+</table>
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+</div>*@
