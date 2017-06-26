@@ -1,4 +1,4 @@
-# digitalx
+# DigitalX
 I created the DigitalX e-commerce web application as the final project for my development course.
 
 DigitalX is a shop for music, movies, and video games in Auckland. The old website of DigitalX was developed using PHP and only supports static HTML web. The website needed to be upgraded to an e-commerce website using .NET Framework and related technologies (ASP.NET, WCF, SQL Server).
